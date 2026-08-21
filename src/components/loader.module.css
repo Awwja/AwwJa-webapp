@@ -1,0 +1,58 @@
+/**
+ * HTML: <div class="loader"></div>
+ *
+ * @format
+ */
+.dropdown {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  transition: opacity 1.3s;
+}
+.loader {
+  width: 15px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: l5 2s infinite linear alternate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes l5 {
+  0% {
+    box-shadow:
+      20px 0 #acad78,
+      -20px 0 #6d6e44;
+    background: #6b6d22;
+  }
+  33% {
+    box-shadow:
+      20px 0 #6d6e44,
+      -20px 0 #acad78;
+    background: #6b6d22;
+  }
+  66% {
+    box-shadow:
+      20px 0 #acad78,
+      -20px 0 #6d6e44;
+    background: #6b6d22;
+  }
+  100% {
+    box-shadow:
+      20px 0 #6b6d22,
+      -20px 0 #acad78;
+    background: #6d6e44;
+  }
+}

@@ -1,0 +1,91 @@
+/** @format */
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #bd5e1f;
+  --color-orange: #bd520a;
+  --font-family: "Plus Jakarta Sans";
+  --color-black: #333333;
+  --font-family2: "Be Vietnam Pro";
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+    background: #f8f8f8;
+  }
+
+  body > * {
+    display: none;
+  }
+
+  body::before {
+    content: "Desktop version coming soon!";
+    display: block;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+  }
+}
+/*Mobile version*/
+@media only screen and (max-width: 768px) {
+  body {
+    font-family: var(--font-family);
+  }
+
+  .screen4 {
+    background: url("./assets/screen4.svg") no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.9s ease-out forwards;
+  }
+
+  input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #d2d5da;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: white;
+  }
+
+  input[type="checkbox"]:checked {
+    background-color: white;
+    position: relative;
+    border-color: #6b6d22;
+  }
+
+  input[type="checkbox"]:checked::after {
+    content: "✓";
+    color: #6b6d22;
+    position: absolute;
+    left: 4px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+}

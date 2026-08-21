@@ -6,7 +6,7 @@ import google from "../../../assets/google.svg";
 import apple from "../../../assets/apple.svg";
 import join from "../../../assets/join.svg";
 import { useNavigate } from "react-router-dom";
-import { formatNumber } from "../../../utils/formatNumber";
+// import { formatNumber } from "../../../utils/formatNumber";
 export default function Login({ setLoading }) {
   const [number, setNumber] = useState("");
   const enter = number.length === 11;

@@ -23,7 +23,7 @@ export default function App() {
     return <Loader />;
   }
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/AwwJa-webapp'>
       <Routes>
         <Route path='/' element={<Splash />} />
         <Route

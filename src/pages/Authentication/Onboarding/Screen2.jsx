@@ -31,9 +31,9 @@ export default function Screen2() {
         </span>
       </div>
 
-      <div className='flex flex-col items-center justify-center gap-y-4 mt-10'>
+      <div className='flex flex-col items-center justify-center gap-y-4 mt-5'>
         <img
-          src='https://res.cloudinary.com/dgwp5nnxb/image/upload/v1788099804/screen2_cnzaid.svg'
+          src='https://res.cloudinary.com/dgwp5nnxb/image/upload/f_auto,q_auto/v1788103745/screen2_jchvpo.svg'
           alt=''
           className='w-full'
           fetchPriority='high'
@@ -47,7 +47,7 @@ export default function Screen2() {
             Negotiate and close deals on your own terms{" "}
           </p>
         </div>
-        <div class='flex items-center gap-3 mt-10'>
+        <div class='flex items-center gap-3 mt-5'>
           <button class='w-6 h-6 rounded-full bg-[#6B6D22] opacity-70'></button>
           <button class='w-8 h-13.25 rounded-full bg-[#6B6D22]'></button>
           <button class='w-6 h-6 rounded-full bg-[#6B6D22] opacity-30'></button>

@@ -14,7 +14,7 @@ export default function Screen1() {
 
       <div className='flex flex-col items-center justify-center gap-y-4 mt-10'>
         <img
-          src='https://res.cloudinary.com/dgwp5nnxb/image/upload/v1788099819/screen1_uqhr3b.svg'
+          src='https://res.cloudinary.com/dgwp5nnxb/image/upload/f_auto,q_auto/v1788103748/screen1_bafpsd.svg'
           alt=''
           className='w-full mt-20'
           fetchPriority='high'

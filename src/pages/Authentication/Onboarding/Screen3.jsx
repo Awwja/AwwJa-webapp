@@ -41,15 +41,15 @@ export default function Screen3({ setLoading }) {
         </span>
       </div>
 
-      <div className='flex flex-col items-center justify-center gap-y-4 mt-20'>
+      <div className='flex flex-col items-center justify-center gap-y-4 mt-10'>
         <img
-          src='https://res.cloudinary.com/dgwp5nnxb/image/upload/v1788099809/screen3_gaol2i.svg'
+          src='https://res.cloudinary.com/dgwp5nnxb/image/upload/f_auto,q_auto/v1788103750/screen3_uhx1i3.svg'
           alt=''
           className='w-full'
           fetchPriority='high'
           decoding='async'
         />
-        <div className='mt-6'>
+        <div className='mt-2'>
           <h2 className='font-family2 text-4xl text-black text-center font-bold'>
             Verified Stalls{" "}
           </h2>
@@ -58,7 +58,7 @@ export default function Screen3({ setLoading }) {
             business{" "}
           </p>
         </div>
-        <div class='flex items-center gap-3 mt-10'>
+        <div class='flex items-center gap-3 mt-5'>
           <button class='w-6 h-6 rounded-full bg-[#6B6D22] opacity-30'></button>
           <button class='w-6 h-6 rounded-full bg-[#6B6D22] opacity-70'></button>
           <button class='w-8 h-13.25 rounded-full bg-[#6B6D22]'></button>

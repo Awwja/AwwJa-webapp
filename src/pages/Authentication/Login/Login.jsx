@@ -27,6 +27,8 @@ export default function Login({ setLoading }) {
         src='https://res.cloudinary.com/dgwp5nnxb/image/upload/v1788101197/login_image_c25nhj.svg'
         className='w-full relative'
         alt=''
+        fetchPriority='high'
+        decoding='async'
       />
       <div className='absolute w-full top-92.5 flex flex-col gap-y-4 justify-center px-6'>
         {/*Header section */}
@@ -97,14 +99,18 @@ export default function Login({ setLoading }) {
 
         {/*Login with google or apple */}
         <div className='flex items-center justify-center mt-4 gap-x-7'>
-          <img
-            src='https://res.cloudinary.com/dgwp5nnxb/image/upload/v1788099827/google_hzgtrd.svg'
-            alt='Google Icon'
-          />
-          <img
-            src='https://res.cloudinary.com/dgwp5nnxb/image/upload/v1788099801/apple_th4grd.svg'
-            alt='Apple Icon'
-          />
+          <div className='w-10 h-10 rounded-full bg-white flex items-center justify-center cursor-pointer'>
+            <img
+              src='https://res.cloudinary.com/dgwp5nnxb/image/upload/v1788099827/google_hzgtrd.svg'
+              alt='Google Icon'
+            />
+          </div>
+          <div className='w-10 h-10 rounded-full bg-white flex items-center justify-center cursor-pointer'>
+            <img
+              src='https://res.cloudinary.com/dgwp5nnxb/image/upload/v1788099801/apple_th4grd.svg'
+              alt='Apple Icon'
+            />
+          </div>
         </div>
 
         {/*Join Awwja */}

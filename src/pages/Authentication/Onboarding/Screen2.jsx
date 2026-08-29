@@ -36,6 +36,8 @@ export default function Screen2() {
           src='https://res.cloudinary.com/dgwp5nnxb/image/upload/v1788099804/screen2_cnzaid.svg'
           alt=''
           className='w-full'
+          fetchPriority='high'
+          decoding='async'
         />
         <div className='flex flex-col items-center'>
           <h2 className='font-family2 text-4xl text-black text-center font-bold'>

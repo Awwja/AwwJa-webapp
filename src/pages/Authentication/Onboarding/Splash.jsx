@@ -20,6 +20,8 @@ export default function Splash() {
         src='https://res.cloudinary.com/dgwp5nnxb/image/upload/v1788099809/splash_lakkyb.svg'
         alt='splash screen'
         className='w-full max-w-225 h-full animate-pulse'
+        fetchPriority='high'
+        decoding='async'
       />
     </div>
   );

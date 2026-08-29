@@ -17,6 +17,8 @@ export default function Screen1() {
           src='https://res.cloudinary.com/dgwp5nnxb/image/upload/v1788099819/screen1_uqhr3b.svg'
           alt=''
           className='w-full mt-20'
+          fetchPriority='high'
+          decoding='async'
         />
         <div className='mt-6'>
           <h2 className='font-family2 text-3xl text-black text-center font-semibold'>

@@ -46,6 +46,8 @@ export default function Screen3({ setLoading }) {
           src='https://res.cloudinary.com/dgwp5nnxb/image/upload/v1788099809/screen3_gaol2i.svg'
           alt=''
           className='w-full'
+          fetchPriority='high'
+          decoding='async'
         />
         <div className='mt-6'>
           <h2 className='font-family2 text-4xl text-black text-center font-bold'>

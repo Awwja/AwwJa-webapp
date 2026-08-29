@@ -1,5 +1,4 @@
 /** @format */
-import img from "../../../assets/screen1.svg";
 import { useNavigate } from "react-router-dom";
 export default function Screen1() {
   const navigate = useNavigate();
@@ -14,7 +13,11 @@ export default function Screen1() {
       </span>
 
       <div className='flex flex-col items-center justify-center gap-y-4 mt-10'>
-        <img src={img} alt='' className='w-full mt-20' />
+        <img
+          src='https://res.cloudinary.com/dgwp5nnxb/image/upload/v1788099819/screen1_uqhr3b.svg'
+          alt=''
+          className='w-full mt-20'
+        />
         <div className='mt-6'>
           <h2 className='font-family2 text-3xl text-black text-center font-semibold'>
             Your Market,

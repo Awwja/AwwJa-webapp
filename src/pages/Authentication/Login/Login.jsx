@@ -1,11 +1,8 @@
 /** @format */
 import { useState } from "react";
-import img from "../../../assets/login_image.svg";
 import forward from "../../../assets/forward.svg";
-import google from "../../../assets/google.svg";
-import apple from "../../../assets/apple.svg";
-import join from "../../../assets/join.svg";
 import { useNavigate } from "react-router-dom";
+
 // import { formatNumber } from "../../../utils/formatNumber";
 export default function Login({ setLoading }) {
   const [number, setNumber] = useState("");
@@ -25,9 +22,13 @@ export default function Login({ setLoading }) {
     }, 3500);
   }
   return (
-    <div>
-      <img src={img} className='w-full relative' alt='' />
-      <div className='absolute w-full min-h-screen top-37.5 flex flex-col gap-y-4 justify-center px-6'>
+    <div className='overflow-hidden'>
+      <img
+        src='https://res.cloudinary.com/dgwp5nnxb/image/upload/v1788101197/login_image_c25nhj.svg'
+        className='w-full relative'
+        alt=''
+      />
+      <div className='absolute w-full top-92.5 flex flex-col gap-y-4 justify-center px-6'>
         {/*Header section */}
         <div className='flex flex-col gap-y-1 text-center '>
           <h3 className='text-white text-3xl font-semibold font-family2'>
@@ -96,13 +97,19 @@ export default function Login({ setLoading }) {
 
         {/*Login with google or apple */}
         <div className='flex items-center justify-center mt-4 gap-x-7'>
-          <img src={google} alt='Google Icon' />
-          <img src={apple} alt='Apple Icon' />
+          <img
+            src='https://res.cloudinary.com/dgwp5nnxb/image/upload/v1788099827/google_hzgtrd.svg'
+            alt='Google Icon'
+          />
+          <img
+            src='https://res.cloudinary.com/dgwp5nnxb/image/upload/v1788099801/apple_th4grd.svg'
+            alt='Apple Icon'
+          />
         </div>
 
         {/*Join Awwja */}
-        <div className='flex flex-col items-center gap-y-2'>
-          <img className='w-fit' src={join} alt='' />
+        <div className='flex mt-10 flex-col items-center gap-y-2'>
+          {/* <img className='w-fit' src={join} alt='' /> */}
           <span className='text-white font-family2 text-xs'>
             New here? Join thousands on Awwja{" "}
             <span className='underline font-semibold'>Create account</span>

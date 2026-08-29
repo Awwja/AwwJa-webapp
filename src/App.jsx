@@ -46,19 +46,26 @@ export default function App() {
           path='/onboarding3'
           element={
             <BoardingScreen>
-              <Screen3 />
+              <Screen3 setLoading={setLoading} />
             </BoardingScreen>
           }
         />
-        <Route
+        {/* <Route
           path='/enter-the-market'
           element={
             <BoardingScreen>
               <Screen4 setLoading={setLoading} />
             </BoardingScreen>
           }
+        /> */}
+        <Route
+          path='/login'
+          element={
+            <BoardingScreen>
+              <Login setLoading={setLoading} />
+            </BoardingScreen>
+          }
         />
-        <Route path='/login' element={<Login setLoading={setLoading} />} />
         <Route path='homepage' element={<Homepage />} />
         {/* <Route path='enter-the-market' element={<LastOnboardingScreen />} /> */}
       </Routes>

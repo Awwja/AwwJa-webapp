@@ -3,12 +3,7 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-const screens = [
-  "/onboarding1",
-  "/onboarding2",
-  "/onboarding3",
-  "/enter-the-market",
-];
+const screens = ["/onboarding1", "/onboarding2", "/onboarding3", "/login"];
 
 export default function BoardingScreen({ children }) {
   const navigate = useNavigate();

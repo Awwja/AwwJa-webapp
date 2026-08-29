@@ -43,7 +43,8 @@
   }
 
   .screen4 {
-    background: url("./assets/screen4.svg") no-repeat;
+    background: url("https://res.cloudinary.com/dgwp5nnxb/image/upload/v1788099809/screen4_ioitiv.svg")
+      no-repeat;
     background-size: cover;
     height: 100%;
     width: 100%;

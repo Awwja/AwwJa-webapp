@@ -1,10 +1,18 @@
 /** @format */
 
-import img from "../../../assets/screen3.svg";
 import { useNavigate } from "react-router-dom";
 
-export default function Screen3() {
+export default function Screen3({ setLoading }) {
   const navigate = useNavigate();
+
+  function handleClick() {
+    setLoading(true);
+
+    setTimeout(() => {
+      navigate("/login");
+      setLoading(false);
+    }, 3000);
+  }
 
   return (
     <div className='bg-linear-to-b from-[#BD5E1F] to-white'>
@@ -27,14 +35,18 @@ export default function Screen3() {
         {/*skip */}
         <span
           className='w-full flex justify-end font-medium text-base cursor-pointer text-black'
-          onClick={() => navigate("/enter-the-market")}
+          onClick={handleClick}
         >
           Continue
         </span>
       </div>
 
       <div className='flex flex-col items-center justify-center gap-y-4 mt-20'>
-        <img src={img} alt='' className='w-full' />
+        <img
+          src='https://res.cloudinary.com/dgwp5nnxb/image/upload/v1788099809/screen3_gaol2i.svg'
+          alt=''
+          className='w-full'
+        />
         <div className='mt-6'>
           <h2 className='font-family2 text-4xl text-black text-center font-bold'>
             Verified Stalls{" "}

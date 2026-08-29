@@ -2,7 +2,6 @@
 
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import img from "../../../assets/splash.svg";
 
 export default function Splash() {
   const navigate = useNavigate();
@@ -10,7 +9,7 @@ export default function Splash() {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate("/onboarding1");
-    }, 5000);
+    }, 8000);
 
     return () => clearTimeout(timer);
   }, [navigate]);
@@ -18,7 +17,7 @@ export default function Splash() {
   return (
     <div>
       <img
-        src={img}
+        src='https://res.cloudinary.com/dgwp5nnxb/image/upload/v1788099809/splash_lakkyb.svg'
         alt='splash screen'
         className='w-full max-w-225 h-full animate-pulse'
       />

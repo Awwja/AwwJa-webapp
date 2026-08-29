@@ -43,7 +43,7 @@ export default function Screen3({ setLoading }) {
 
       <div className='flex flex-col items-center justify-center gap-y-4 mt-10'>
         <img
-          src='https://res.cloudinary.com/dgwp5nnxb/image/upload/f_auto,q_auto/v1788103750/screen3_uhx1i3.svg'
+          src='https://res.cloudinary.com/dgwp5nnxb/image/upload/f_auto,q_auto/v1788105496/screen3_kknxhe.png'
           alt=''
           className='w-full'
           fetchPriority='high'
@@ -58,7 +58,7 @@ export default function Screen3({ setLoading }) {
             business{" "}
           </p>
         </div>
-        <div class='flex items-center gap-3 mt-5'>
+        <div class='flex items-center gap-3 mt-10'>
           <button class='w-6 h-6 rounded-full bg-[#6B6D22] opacity-30'></button>
           <button class='w-6 h-6 rounded-full bg-[#6B6D22] opacity-70'></button>
           <button class='w-8 h-13.25 rounded-full bg-[#6B6D22]'></button>

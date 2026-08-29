@@ -31,9 +31,9 @@ export default function Screen2() {
         </span>
       </div>
 
-      <div className='flex flex-col items-center justify-center gap-y-4 mt-5'>
+      <div className='flex flex-col items-center justify-center gap-y-4 mt-10'>
         <img
-          src='https://res.cloudinary.com/dgwp5nnxb/image/upload/f_auto,q_auto/v1788103745/screen2_jchvpo.svg'
+          src='https://res.cloudinary.com/dgwp5nnxb/image/upload/f_auto,q_auto/v1788105361/screen2_broqbl.png'
           alt=''
           className='w-full'
           fetchPriority='high'

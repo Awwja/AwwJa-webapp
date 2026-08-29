@@ -5,7 +5,6 @@ import Splash from "./pages/Authentication/Onboarding/Splash";
 import Screen1 from "./pages/Authentication/Onboarding/Screen1";
 import Screen2 from "./pages/Authentication/Onboarding/Screen2";
 import Screen3 from "./pages/Authentication/Onboarding/Screen3";
-import Screen4 from "./pages/Authentication/Onboarding/Screen4";
 import BoardingScreen from "./pages/Authentication/Onboarding/BoardingScreen";
 import Loader from "./components/Loader";
 import { useEffect, useState } from "react";

@@ -17,9 +17,9 @@ export default function Splash() {
   return (
     <div>
       <img
-        src='https://res.cloudinary.com/dgwp5nnxb/image/upload/f_auto,q_auto/v1788103451/Splash_c7bdac.svg'
+        src='https://res.cloudinary.com/dgwp5nnxb/image/upload/f_auto,q_auto/v1788260278/Splash_wdeucn.svg'
         alt='splash screen'
-        className='w-full max-w-225 h-full animate-pulse'
+        className='w-full max-w-235 h-full animate-pulse'
         fetchPriority='high'
         decoding='async'
       />

@@ -10,6 +10,8 @@ import Loader from "./components/Loader";
 import { useEffect, useState } from "react";
 import Login from "./pages/Authentication/Login/Login";
 import Homepage from "./pages/Homepage/Homepage";
+import Search from "./pages/Search/Search";
+import BottomNav from "./components/BottomNav";
 export default function App() {
   const [loading, setLoading] = useState(false);
 
@@ -22,34 +24,35 @@ export default function App() {
     return <Loader />;
   }
   return (
-    <BrowserRouter basename='/AwwJa-webapp'>
-      <Routes>
-        <Route path='/' element={<Splash />} />
-        <Route
-          path='/onboarding1'
-          element={
-            <BoardingScreen>
-              <Screen1 />
-            </BoardingScreen>
-          }
-        />
-        <Route
-          path='/onboarding2'
-          element={
-            <BoardingScreen>
-              <Screen2 />
-            </BoardingScreen>
-          }
-        />
-        <Route
-          path='/onboarding3'
-          element={
-            <BoardingScreen>
-              <Screen3 setLoading={setLoading} />
-            </BoardingScreen>
-          }
-        />
-        {/* <Route
+    <div>
+      <BrowserRouter basename="/AwwJa-webapp">
+        <Routes>
+          <Route path="/" element={<Splash />} />
+          <Route
+            path="/onboarding1"
+            element={
+              <BoardingScreen>
+                <Screen1 />
+              </BoardingScreen>
+            }
+          />
+          <Route
+            path="/onboarding2"
+            element={
+              <BoardingScreen>
+                <Screen2 />
+              </BoardingScreen>
+            }
+          />
+          <Route
+            path="/onboarding3"
+            element={
+              <BoardingScreen>
+                <Screen3 setLoading={setLoading} />
+              </BoardingScreen>
+            }
+          />
+          {/* <Route
           path='/enter-the-market'
           element={
             <BoardingScreen>
@@ -57,17 +60,22 @@ export default function App() {
             </BoardingScreen>
           }
         /> */}
-        <Route
-          path='/login'
-          element={
-            <BoardingScreen>
-              <Login setLoading={setLoading} />
-            </BoardingScreen>
-          }
-        />
-        <Route path='homepage' element={<Homepage />} />
-        {/* <Route path='enter-the-market' element={<LastOnboardingScreen />} /> */}
-      </Routes>
-    </BrowserRouter>
+          <Route
+            path="/login"
+            element={
+              <BoardingScreen>
+                <Login setLoading={setLoading} />
+              </BoardingScreen>
+            }
+          />
+          <Route path="/home" element={<Homepage />} />
+          <Route path="/search" element={<Search />} />
+          {/* <Route path='enter-the-market' element={<LastOnboardingScreen />} /> */}
+        </Routes>
+
+        <BottomNav />
+      </BrowserRouter>
+      {/**bottom Nav */}
+    </div>
   );
 }

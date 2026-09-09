@@ -99,7 +99,7 @@ export default function Recommended() {
           </div>
         </div>
       ))}
-      <div></div>
+      {/* <div></div> */}
     </div>
   );
 }

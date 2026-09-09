@@ -13,7 +13,7 @@ export default function Homepage() {
 
   return (
     <>
-      <div className="flex flex-col gap-y-6 px-5 py-5 overflow-scroll relative bottom-10">
+      <div className="flex flex-col gap-y-8 px-5 py-5 pt-13 overflow-scroll relative bottom-10">
         <SearchFIlter />
         <FlashSales />
         <VerifiedStalls />

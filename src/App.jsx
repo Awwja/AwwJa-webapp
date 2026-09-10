@@ -12,6 +12,7 @@ import Login from "./pages/Authentication/Login/Login";
 import Homepage from "./pages/Homepage/Homepage";
 import Search from "./pages/Search/Search";
 import BottomNav from "./components/BottomNav";
+import Stall from "./pages/Homepage/SellersStall/Stall";
 export default function App() {
   const [loading, setLoading] = useState(false);
 
@@ -75,6 +76,7 @@ export default function App() {
           }
         />
         <Route path="/home" element={<Homepage />} />
+        <Route path="/sellers/:type" element={<Stall />} />
         <Route path="/search" element={<Search />} />
         {/* <Route path='enter-the-market' element={<LastOnboardingScreen />} /> */}
       </Routes>

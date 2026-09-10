@@ -140,7 +140,7 @@ export default function BottomNav() {
 
       {/*profile */}
       <NavLink
-        to="/search"
+        to="/profile"
         className={({ isActive }) =>
           `group relative cursor-pointer flex flex-col gap-y-1 items-center font-medium text-xs font-family ${
             isActive ? " text-orange" : "text-black2"

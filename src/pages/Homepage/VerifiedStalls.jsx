@@ -1,7 +1,12 @@
 /** @format */
 import fabric from "../../assets/homepage/fabric.svg";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function VerifiedStalls() {
+  const seller_name = "Olu's Gems";
+  const navigate = useNavigate();
+
+  const sellersStall = seller_name.toLowerCase().replaceAll(" ", "");
   return (
     <div className="flex flex-col gap-y-3">
       <div className="flex items-center justify-between">
@@ -82,7 +87,7 @@ export default function VerifiedStalls() {
           </svg>
           <div className="flex flex-col">
             <span className="text-[#000000] font-family2 front-semibold">
-              Olu's Gems
+              {seller_name}
             </span>
             <p className="text-[10px] text-black2 font-family2">
               by Olumide Mandela
@@ -133,6 +138,7 @@ export default function VerifiedStalls() {
           <button
             type="button"
             className="cursor-pointer uppercase text-xs text-green font-family2 flex items-center gap-x-1"
+            onClick={() => navigate(`/sellers/${sellersStall}`)}
           >
             browse stall
             <svg

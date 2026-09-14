@@ -1,6 +1,6 @@
 export default function Listing() {
   return (
-    <div className="p-6 bg-orange rounded-[40px] rotate-3 mt-10 flex flex-col items-center gap-y-4">
+    <div className="p-6 bg-orange rounded-[40px] rotate-2 mt-10 flex flex-col items-center gap-y-4">
       <div className="bg-green border border-green2 mt-5 flex items-center gap-x-2 px-4 py-3 w-fit rounded-full -rotate-2">
         {/*spotlight icon */}
         <svg
@@ -33,15 +33,38 @@ export default function Listing() {
         </h3>
       </div>
 
-      <div className="-rotate-2">
-        <h3>top stall this month</h3>
-        <span>
+      <div className="-rotate-1 flex flex-col gap-y-1.5">
+        <h3 className="text-white text-sm font-semibold font-family2 uppercase">
+          top stall this month
+        </h3>
+        <span className="font-family text-white text-sm font-light">
           Olu's gems has reached over 500 successful trades this month with zero
           disputes. Experience the best of Lagos.
         </span>
       </div>
-      <img src="" alt="" />
-      <button>explore collection</button>
+      <img
+        className="mt-5 rounded-xl"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSIGUnlqize0MiYETDftBEHwmNMkQU2V8WBUZ3-T3MOA&s=10"
+        alt=""
+      />
+      <button
+        type="button"
+        className="font-bold mt-10 mb-10 text-sm text-white font-family uppercase -rotate-2 flex items-center gap-x-1.5"
+      >
+        explore collection
+        <svg
+          width="10"
+          height="10"
+          viewBox="0 0 10 10"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.19298 5.40993L0.0927273 5.24865L0.119221 4.08228L7.21947 4.24356L4.02783 0.903554L4.87741 0.105974L9.4369 4.87741L4.66546 9.4369L3.85297 8.60157L7.19298 5.40993Z"
+            fill="white"
+          />
+        </svg>
+      </button>
     </div>
   );
 }

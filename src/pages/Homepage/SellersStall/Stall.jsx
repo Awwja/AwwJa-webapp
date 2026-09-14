@@ -39,7 +39,7 @@ export default function Stall() {
       )}
       {active === "review" && <Review />}
       {active === "about" && <About />}
-      <AvailableProduct />
+      {active === "listing" && <AvailableProduct />}
     </div>
   );
 }

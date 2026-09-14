@@ -6,10 +6,10 @@ import { useNavigate } from "react-router-dom";
 // import { formatNumber } from "../../../utils/formatNumber";
 export default function Login({ setLoading }) {
   const [number, setNumber] = useState("");
-  const enter = number.length === 11;
+  const enter = number.length === 10;
   const navigate = useNavigate();
   function handlePhoneChange(e) {
-    const value = e.target.value.replace(/\D/g, "").slice(0, 11);
+    const value = e.target.value.replace(/\D/g, "").slice(0, 10);
     setNumber(value);
   }
 
@@ -63,7 +63,7 @@ export default function Login({ setLoading }) {
 
           <button
             type="button"
-            className="w-full py-2 bg-green rounded-[10px] border border-[#DADC8F] text-white flex items-center justify-center cursor-pointer gap-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full py-2 bg-green rounded-[10px] border border-green2 text-white flex items-center justify-center cursor-pointer gap-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
             onClick={Enter}
             disabled={!enter}
           >

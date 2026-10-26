@@ -35,13 +35,14 @@ export default function App() {
       setLoading(false);
     }, 3500);
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
   if (loading) {
     return <Loader />;
   }
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <div>
       {!path && !noNav && <Navbar />}

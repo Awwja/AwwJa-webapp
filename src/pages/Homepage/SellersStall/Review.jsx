@@ -19,7 +19,7 @@ export default function Review() {
     },
   ];
   return (
-    <div className="mb-10 flex flex-col gap-y-4 px-5 mb-5">
+    <div className="mb-10 flex flex-col gap-y-4 px-5">
       {review.map((data, index) => (
         <div className="flex justify-between items-center bg-white shadow-xl border border-black3 py-3 px-2 rounded-lg">
           <div className="flex items-center gap-x-2">

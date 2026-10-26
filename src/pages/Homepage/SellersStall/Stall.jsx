@@ -8,7 +8,7 @@ import AvailableProduct from "./AvailableProduct";
 export default function Stall() {
   const [active, setActive] = useState("listing");
   return (
-    <div className="flex flex-col gap-y-8 pt-13 overflow-scroll relative bottom-10">
+    <div className="flex flex-col gap-y-8 pt-13 overflow-scroll relative px-5 bottom-10">
       <Sellers />
 
       <div className="flex items-center justify-center gap-x-15">
@@ -32,7 +32,7 @@ export default function Stall() {
         </span>
       </div>
       {active === "listing" && (
-        <div className="px-7">
+        <div>
           {" "}
           <Listing />
         </div>

@@ -1,0 +1,106 @@
+import React, { useState } from "react";
+
+export default function Details({
+  brand_name,
+  rating,
+  price,
+  product_name,
+  setLastPrice,
+  lastPrice,
+  negotiate,
+}) {
+  return (
+    <div className="flex flex-col gap-y-3 px-5">
+      {/*Brand name, product name and ratings */}
+      <div className="flex flex-col gap-y-1">
+        <div className="flex items-center gap-x-3">
+          <h4 className="m-0 text-base font-medium font-family2 text-black2 capitalize">
+            {brand_name}
+          </h4>
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M14.9213 0.845157C14.7227 0.527804 14.4301 0.28027 14.0842 0.137011C13.7383 -0.00624784 13.3564 -0.0381037 12.9916 0.0458788L10.4024 0.640657C10.1371 0.701649 9.86133 0.701649 9.59598 0.640657L7.00677 0.0458788C6.64196 -0.0381037 6.26004 -0.00624784 5.91417 0.137011C5.56831 0.28027 5.27571 0.527804 5.07711 0.845157L3.66586 3.09753C3.52186 3.32796 3.32745 3.52238 3.09705 3.66783L0.844813 5.07917C0.528028 5.27761 0.280873 5.56975 0.137654 5.91504C-0.0055644 6.26034 -0.0377425 6.64166 0.0455866 7.00607L0.640326 9.59833C0.701094 9.86323 0.701094 10.1385 0.640326 10.4034L0.0455866 12.9942C-0.0380663 13.3588 -0.0060502 13.7404 0.137184 14.086C0.280418 14.4316 0.527755 14.724 0.844813 14.9225L3.09705 16.3339C3.32745 16.4779 3.52186 16.6723 3.6673 16.9027L5.07855 19.1551C5.48464 19.8046 6.25939 20.1257 7.00677 19.9544L9.59598 19.3596C9.86133 19.2986 10.1371 19.2986 10.4024 19.3596L12.993 19.9544C13.3577 20.038 13.7393 20.006 14.0848 19.8628C14.4304 19.7195 14.7228 19.4722 14.9213 19.1551L16.3325 16.9027C16.4765 16.6723 16.6709 16.4779 16.9013 16.3339L19.155 14.9225C19.4721 14.7237 19.7193 14.431 19.8623 14.0851C20.0053 13.7393 20.0369 13.3574 19.9528 12.9927L19.3595 10.4034C19.2985 10.138 19.2985 9.86225 19.3595 9.59689L19.9542 7.00607C20.038 6.6416 20.0062 6.26007 19.8633 5.91449C19.7203 5.56892 19.4732 5.27645 19.1564 5.07773L16.9028 3.66639C16.6727 3.52211 16.4782 3.32764 16.334 3.09753L14.9213 0.845157ZM14.1969 6.78861C14.286 6.62482 14.3081 6.43286 14.2585 6.25313C14.2089 6.0734 14.0916 5.9199 13.9311 5.82493C13.7707 5.72997 13.5797 5.70094 13.3983 5.74396C13.2169 5.78698 13.0592 5.89869 12.9585 6.05558L9.19276 12.4296L6.91893 10.2521C6.85147 10.1829 6.77076 10.1279 6.6816 10.0905C6.59244 10.0531 6.49666 10.0341 6.39997 10.0345C6.30329 10.0349 6.20768 10.0548 6.11885 10.093C6.03002 10.1311 5.94979 10.1868 5.88293 10.2567C5.81608 10.3265 5.76399 10.4091 5.72975 10.4995C5.69551 10.59 5.67983 10.6864 5.68365 10.783C5.68747 10.8796 5.71071 10.9745 5.75198 11.0619C5.79325 11.1493 5.8517 11.2276 5.92386 11.2919L8.85291 14.0988C8.93131 14.1737 9.02562 14.23 9.12882 14.2634C9.23201 14.2968 9.34142 14.3065 9.44887 14.2916C9.55632 14.2768 9.65903 14.2379 9.74933 14.1778C9.83964 14.1178 9.91521 14.0381 9.97039 13.9447L14.1969 6.78861Z"
+              fill="#BD520A"
+            />
+          </svg>
+        </div>
+        <h2 className="m-0 capitalize font-bold text-[24px] font-family2 text-black4">
+          {product_name}
+        </h2>
+        <div className="flex justify-between gap-x-3">
+          <div className="flex items-center gap-x-3">
+            <svg
+              className="mt-px"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.99963 2L9.5663 5.84L13.7063 6.14667L10.533 8.82667L11.5263 12.8533L7.99963 10.6667L4.47297 12.8533L5.4663 8.82667L2.29297 6.14667L6.43297 5.84L7.99963 2Z"
+                fill="#FFDB43"
+              />
+              <path
+                d="M7.99963 2L6.43297 5.84L2.29297 6.14667L5.4663 8.82667L4.47297 12.8533L7.99963 10.6667M7.99963 2L9.5663 5.84L13.7063 6.14667L10.533 8.82667L11.5263 12.8533L7.99963 10.6667"
+                stroke="#FFDB43"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+
+            <span className="text-sm font-medium font-family2 text-black">
+              {rating} <span className="text-black2">(48 reviews)</span>
+            </span>
+          </div>
+          <span className="text-sm font-medium font-family2 text-[#000000] capitalize">
+            54 sold
+          </span>
+        </div>
+      </div>
+      {/*Pricing and add to cart */}
+      <div className="w-full flex flex-col items-center gap-y-4">
+        <div className="w-full flex flex-col gap-y-1.5 items-center bg-white shadow-xs p-6 rounded-3xl mt-5">
+          <span className="text-sm font-semibold font-family2 text-black5 uppercase">
+            price
+          </span>
+          <h2 className="m-0 text-[26px] font-semibold font-family2 text-black4">
+            ₦{price}
+          </h2>
+          <p className="text-black mt-3 font-family font-medium text-[10px] border-[0.5px] border-bg px-8 py-2 rounded-lg">
+            Tap <span className="text-[#A04100]">Last Price?</span> to negotiate
+            with Olu’s Gems.
+          </p>
+        </div>
+        <div className="flex items-center gap-x-4">
+          {negotiate === true && (
+            <button
+              type="button"
+              className="bg-green capitalize p-4 rounded-[10px] shadow-xs border-none text-white font-family2 text-sm font-medium hover:opacity-50"
+              onClick={() => {
+                setLastPrice(!lastPrice);
+              }}
+            >
+              last price
+            </button>
+          )}
+          <button
+            type="button"
+            className="bg-white  p-4 rounded-[10px] shadow-xs border-[0.3px] border-green text-green font-family2 text-sm font-medium hover:bg-gray-200"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}

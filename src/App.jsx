@@ -13,6 +13,10 @@ import Homepage from "./pages/Homepage/Homepage";
 import Search from "./pages/Search/Search";
 import BottomNav from "./components/BottomNav";
 import Stall from "./pages/Homepage/SellersStall/Stall";
+import ProfilePage from "./pages/Profile/ProfilePage";
+import ProductDetails from "./pages/ProductDetails.jsx/ProductDetails";
+import Navbar from "./components/Navbar";
+import Cart from "./pages/Cart/Cart";
 export default function App() {
   const [loading, setLoading] = useState(false);
 
@@ -23,6 +27,9 @@ export default function App() {
     location.pathname.includes("/onboarding") ||
     location.pathname.includes("/login");
 
+  const noNav =
+    location.pathname === "/home" || location.pathname === "/profile";
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -31,8 +38,14 @@ export default function App() {
   if (loading) {
     return <Loader />;
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
+      {!path && !noNav && <Navbar />}
+
       <Routes>
         <Route path="/" element={<Splash />} />
         <Route
@@ -59,14 +72,7 @@ export default function App() {
             </BoardingScreen>
           }
         />
-        {/* <Route
-          path='/enter-the-market'
-          element={
-            <BoardingScreen>
-              <Screen4 setLoading={setLoading} />
-            </BoardingScreen>
-          }
-        /> */}
+
         <Route
           path="/login"
           element={
@@ -78,10 +84,14 @@ export default function App() {
         <Route path="/home" element={<Homepage />} />
         <Route path="/sellers/:type" element={<Stall />} />
         <Route path="/search" element={<Search />} />
-        {/* <Route path='enter-the-market' element={<LastOnboardingScreen />} /> */}
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route
+          path="/product-details"
+          element={<ProductDetails setLoadingApp={setLoading} />}
+        />
+        <Route path="/add-to-cart" element={<Cart />} />
       </Routes>
       {!path && <BottomNav />}
-      {/**bottom Nav */}
     </div>
   );
 }

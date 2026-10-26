@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="px-5 flex flex-col items-center gap-y-3 mb-15">
+    <div className=" flex flex-col items-center gap-y-3 mb-15">
       <span className="border border-orange/40 rounded-2xl p-3 text-xs font-family text-black2 leading-5">
         Welcome to Olu’s Gems! We specialize in hancrafted African goods with a
         focus on quality and authenticity.Every product is carefully selected

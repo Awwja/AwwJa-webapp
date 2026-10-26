@@ -39,7 +39,7 @@ export default function AvailableProduct() {
     },
   ];
   return (
-    <div className="flex flex-col items-center gap-y-2.5 w-full px-5 mt-5 pb-10">
+    <div className="flex flex-col items-center gap-y-2.5 w-full mt-5 pb-10">
       <div className="flex justify-between w-full">
         <span className="text-[18px] font-semibold font-family2">
           Available Products

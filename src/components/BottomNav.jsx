@@ -80,7 +80,7 @@ export default function BottomNav() {
 
       {/*cart */}
       <NavLink
-        to="/cart"
+        to="/add-to-cart"
         className={({ isActive }) =>
           `group relative cursor-pointer flex flex-col gap-y-1 items-center font-medium text-xs font-family ${
             isActive ? " text-orange" : "text-black2"

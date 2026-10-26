@@ -1,52 +1,25 @@
 /** @format */
-import sneakers from "../../assets/homepage/sneakers.png";
-import bag from "../../assets/homepage/bag.png";
-import chair from "../../assets/homepage/chair.png";
-import bead from "../../assets/homepage/bead.png";
+import { useNavigate } from "react-router-dom";
+import recommendedProducts from "../../data/recommendedProducts";
 
 export default function Recommended() {
-  const recommend = [
-    {
-      negotiate: true,
-      img: sneakers,
-      product_name: "sneakers",
-      brand_name: "mama chidera",
-      price: "35,000 ngn",
-      rating: "(4.7)",
-    },
-    {
-      negotiate: false,
-      img: bag,
-      product_name: "bag",
-      brand_name: "dora",
-      price: "25,000 ngn",
-      rating: "(4.2)",
-    },
-    {
-      negotiate: true,
-      img: chair,
-      product_name: "accent chair",
-      brand_name: "judgt furnitures",
-      price: "150,000 ngn",
-      rating: "(4.1)",
-    },
-    {
-      negotiate: false,
-      img: bead,
-      product_name: "beaded waistchain",
-      brand_name: "zuri's craft",
-      price: "7,000 ngn",
-      rating: "(4.0)",
-    },
-  ];
+  const navigate = useNavigate();
+
+  function clickProduct(product) {
+    navigate(`/product-details?product=${product.id}`);
+  }
   return (
     <div className="flex flex-col gap-y-5">
       <h1 className="uppercase text-[18px] font-family2 font-semibold">
         Recommended for you
       </h1>
 
-      {recommend.map((list, index) => (
-        <div className="pt-4 rounded-xl border border-black3 relative">
+      {recommendedProducts.map((list) => (
+        <div
+          className="pt-4 rounded-xl border border-black3 relative"
+          key={list.id}
+          onClick={() => clickProduct(list)}
+        >
           <img src={list.img} className="m-auto h-fit" alt="" />
 
           <div className="bg-black3 rounded-xl px-4 py-2 flex flex-col gap-y-2">
@@ -63,7 +36,7 @@ export default function Recommended() {
                 {list.product_name}
               </label>
               <span className="text-green font-bold uppercase font-family2">
-                {list.price}
+                {list.price} ngn
               </span>
             </div>
             <div className="flex items-center gap-y-2 justify-between">
@@ -92,8 +65,7 @@ export default function Recommended() {
                     strokeLinejoin="round"
                   />
                 </svg>
-
-                {list.rating}
+                ({list.rating})
               </span>
             </div>
           </div>
